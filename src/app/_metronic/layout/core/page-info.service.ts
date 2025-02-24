@@ -108,14 +108,11 @@ export class PageInfoService {
     if (!menu) {
       return;
     }
-console.log(menu)
     const allActiveParents = Array.from<HTMLDivElement>(
       menu.querySelectorAll('div.menu-item')
     ).filter((link) => {
       link.classList.contains('here');
-      console.log(link.classList);
     });
-console.log(allActiveParents)
     if (!allActiveParents || allActiveParents.length === 0) {
       return;
     }
